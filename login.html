@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://nissanrewards.com.ec/NissanEcuadorAdmin/login?logout -->
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Administracion - Dashboard</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+	<!--Addons-->
+	<link href="css/toastr.min.css" rel="stylesheet">
+	<link href="css/datepicker3.css" rel="stylesheet">
+	<link href="css/ladda-themeless.min.css" rel="stylesheet">
+	<link href="css/datatables.min.css" rel="stylesheet">
+	<link href="css/select2.min.css" rel="stylesheet">
+	<link href="css/switchery.css" rel="stylesheet">
+	<link href="css/sweetalert.css" rel="stylesheet">
+	<link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+	<link href="css/fileinput.min.css" rel="stylesheet">
+
+	<!--General-->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/glyphicons.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+
+	<style type="text/css"></style>
+	<style>
+		@-webkit-keyframes loadingoverlay_animation__rotate_right {
+			to {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@keyframes loadingoverlay_animation__rotate_right {
+			to {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
+		}
+
+		@-webkit-keyframes loadingoverlay_animation__rotate_left {
+			to {
+				-webkit-transform: rotate(-360deg);
+				transform: rotate(-360deg);
+			}
+		}
+
+		@keyframes loadingoverlay_animation__rotate_left {
+			to {
+				-webkit-transform: rotate(-360deg);
+				transform: rotate(-360deg);
+			}
+		}
+
+		@-webkit-keyframes loadingoverlay_animation__fadein {
+			0% {
+				opacity: 0;
+				-webkit-transform: scale(0.1, 0.1);
+				transform: scale(0.1, 0.1);
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				-webkit-transform: scale(1, 1);
+				transform: scale(1, 1);
+			}
+		}
+
+		@keyframes loadingoverlay_animation__fadein {
+			0% {
+				opacity: 0;
+				-webkit-transform: scale(0.1, 0.1);
+				transform: scale(0.1, 0.1);
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				-webkit-transform: scale(1, 1);
+				transform: scale(1, 1);
+			}
+		}
+
+		@-webkit-keyframes loadingoverlay_animation__pulse {
+			0% {
+				-webkit-transform: scale(0, 0);
+				transform: scale(0, 0);
+			}
+			50% {
+				-webkit-transform: scale(1, 1);
+				transform: scale(1, 1);
+			}
+			100% {
+				-webkit-transform: scale(0, 0);
+				transform: scale(0, 0);
+			}
+		}
+
+		@keyframes loadingoverlay_animation__pulse {
+			0% {
+				-webkit-transform: scale(0, 0);
+				transform: scale(0, 0);
+			}
+			50% {
+				-webkit-transform: scale(1, 1);
+				transform: scale(1, 1);
+			}
+			100% {
+				-webkit-transform: scale(0, 0);
+				transform: scale(0, 0);
+			}
+		}
+
+	</style>
+</head>
+
+<body class="gray-bg pace-done">
+	<div class="pace  pace-inactive">
+		<div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+			<div class="pace-progress-inner"></div>
+		</div>
+		<div class="pace-activity"></div>
+	</div>
+
+	<div class="middle-box text-center loginscreen animated fadeInDown">
+		<div>
+			<div>
+				<h1>
+					<img src="./login_files/logo2.png" alt="" style="width: 60%">
+				</h1>
+
+			</div>
+			<h3>Administrador</h3>
+
+			<div class="ibox-content">
+				<form id="frmLogin" class="m-t" role="form" method="post" action="http://nissanrewards.com.ec/NissanEcuadorAdmin/autenticar" onsubmit="return false;" novalidate="novalidate">
+					<div id="contentLogin">
+						<div class="form-group">
+							<input type="text" class="form-control" name="username" placeholder="Usuario" required="">
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control" name="password" placeholder="Contraseña" required="">
+						</div>
+					</div>
+					<a class="btn btn-primary block full-width m-b" id="btnLogin" href="index.html">Ingresar</a>
+
+				</form>
+			</div>
+			<p class="m-t"> <small>Copyright Promotick © 2020</small> </p>
+		</div>
+	</div>
+
+
+
+	<!--General-->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.metisMenu.js"></script>
+	<script src="js/jquery.slimscroll.min.js"></script>
+
+	<!--Configuration-->
+	<script src="js/inspinia.js"></script>
+	<script src="js/pace.min.js"></script>
+
+	<!--Addons-->
+	<script src="js/Chart.min.js"></script>
+	<script src="js/toastr.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/handlebars-v4.1.2.js"></script>
+	<script src="js/jquery.form.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/additional-methods.min.js"></script>
+	<script src="js/datatables.min.js"></script>
+	<script src="js/dataTables.bootstrap4.min.js"></script>
+	<script src="js/fnFindCellRowIndexes.js"></script>
+	<script src="js/select2.js"></script>
+	<script src="js/spin.min.js"></script>
+	<script src="js/ladda.min.js"></script>
+	<script src="js/ladda.jquery.min.js"></script>
+	<script src="js/loadingoverlay.js"></script>
+	<script src="js/switchery.js"></script>
+	<script src="js/sweetalert.min.js"></script>
+	<script src="js/fileinput.min.js"></script>
+	<script src="js/fileinput-es.js"></script>
+	<script src="js/fileinput-theme.min.js"></script>
+
+	<!--Plugin-->
+	<script src="js/promotick.js"></script>
+	<script src="js/promotick-ajax.js"></script>
+	<script src="js/promotick-toast.js"></script>
+	<script src="js/promotick-loader.js"></script>
+	<script src="js/promotick-modal.js"></script>
+	<script src="js/promotick-render.js"></script>
+	<script src="js/promotick-admin.js"></script>
+
+
+
+	<script src="./login_files/login.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			var login = new Login('/NissanEcuadorAdmin/');
+			login.init();
+		});
+
+	</script>
+
+
+
+
+</body>
+
+</html>
