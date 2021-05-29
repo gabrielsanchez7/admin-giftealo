@@ -34,6 +34,10 @@
 
     <style type="text/css"></style>
     <style>
+        .ibox-tools a {
+            color: #fff!important;
+        }
+
         @-webkit-keyframes loadingoverlay_animation__rotate_right {
             to {
                 -webkit-transform: rotate(360deg);
@@ -154,7 +158,7 @@
                             <li>
                                 <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Productos</span> </a>
                             </li>
                             <li>
@@ -162,6 +166,9 @@
                             </li>
                             <li>
                                 <a href="marca.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Marcas</span> </a>
+                            </li>
+                            <li class="active">
+                                <a href="campania.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Campañas</span> </a>
                             </li>
                             <li>
                                 <a href="img-producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Imágenes de productos</span> </a>
@@ -226,119 +233,110 @@
 
                 <div class="row wrapper border-bottom white-bg page-heading">
                     <div class="col-lg-10">
-                        <h2>Importar productos</h2>
+                        <h2>Gestión de campañas</h2>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="index.html">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item">
-                                <a href="producto.html">Gestión de productos</a>
+                            <li class="breadcrumb-item active">
+                                <strong>Gestión de campañas</strong>
                             </li>
-
                         </ol>
                     </div>
                 </div>
 
                 <div class="wrapper wrapper-content animated fadeInUp">
-
                     <div class="row">
-                        <div class="col-xs-12 col-md-4">
-
+                        <div class="col-lg-12">
                             <div class="ibox">
                                 <div class="ibox-title">
-                                    <h5>Informacion</h5>
+                                    <h5>Campañas</h5>
                                     <div class="ibox-tools ibox-tools-button">
 
+                                        <button type="button" class="btn btn-warning btn-sm btnAccion" data-url=""><i class="fa fa-download"></i> Exportar excel</button>
+                                        <a type="button" class="btn btn-warning btn-sm btnAccion" href="importar-marca.html"><i class="fa fa-upload"></i> Importar marca</a>
+                                        <a type="button" class="btn btn-danger btn-sm btnAccion" href="nueva-campa.html"><i class="fa fa-plus"></i> Nueva campaña</a>
                                     </div>
                                 </div>
 
                                 <div class="ibox-content">
-                                    <span>Plantilla</span>
-                                    <ul style="font-size: 11px;">
-                                        <li>
-                                            <a href="">FORMATO_CARGA_PRODUCTOS.xlsx</a>
-                                        </li>
-                                    </ul>
 
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="row m-b-sm m-t-sm">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="form-group">
 
+                                                <label class="font-normal">Búsqueda :</label>
 
-                        <div class="col-xs-12 col-md-8">
+                                                <div class="input-daterange input-group">
 
-                            <div class="ibox">
-                                <div class="ibox-title">
-                                    <h5>Carga</h5>
-                                    <div class="ibox-tools ibox-tools-button">
+                                                    <input type="text" class="form-control-sm form-control" name="buscarProducto" id="buscarProducto" placeholder="nombre">
+
+                                                    <button type="button" class="btn btn-primary btn-sm" id="btnFiltrar" style="margin-left: 10px;"><i class="fa fa-search"></i> Buscar</button>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                     </div>
-                                </div>
 
-                                <div class="ibox-content">
-                                    <div class="file-input file-input-new theme-fa form-group row">
-                                        <div class="col-md-12">
-                                            <div class="kv-upload-progress kv-hidden" style="display: none;">
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
-                                                        0%
+                                    <div class="table-responsive">
+                                        <div id="gridProductos_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <table class="table table-bordered table-hover dataTable no-footer" id="gridProductos" style="width: 100%;" role="grid" aria-describedby="gridProductos_info">
+                                                        <thead>
+                                                            <tr role="row">
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 84px;">Id</th>
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 78px;">Nombre</th>
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 78px;">Catalogo</th>
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 78px;">Fecha de inicio</th>
+                                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 78px;">Fecha de fin</th>
+                                                                <th class="sorting_disabled estado" rowspan="1" colspan="1" style="width: 54px;">Estado</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr role="row" class="odd">
+                                                                <td><a href="detalle-marca.html"><u>123</u></a></td>
+                                                                <td>Campaña 1</td>
+                                                                <td>Lorem ipsum</td>
+                                                                <td>Lorem ipsum</td>
+                                                                <td>Lorem ipsum</td>
+                                                                <td>Activo</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-5">
+                                                    <div class="dataTables_info" id="gridProductos_info" role="status" aria-live="polite">Mostrando registros del 1 al 10 de un total de 100 registros</div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-7">
+                                                    <div class="dataTables_paginate paging_simple_numbers" id="gridProductos_paginate">
+                                                        <ul class="pagination">
+                                                            <li class="paginate_button page-item previous disabled" id="gridProductos_previous"><a href="" aria-controls="gridProductos" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li>
+                                                            <li class="paginate_button page-item active"><a href="" aria-controls="gridProductos" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                                            <li class="paginate_button page-item disabled" id="gridProductos_ellipsis"><a href="" aria-controls="gridProductos" data-dt-idx="6" tabindex="0" class="page-link">…</a></li>
+                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="7" tabindex="0" class="page-link">10</a></li>
+                                                            <li class="paginate_button page-item next" id="gridProductos_next"><a href="" aria-controls="gridProductos" data-dt-idx="8" tabindex="0" class="page-link">Siguiente</a></li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="clearfix"></div>
-                                            <div class="input-group file-caption-main">
-                                                <div class="file-caption form-control kv-fileinput-caption" tabindex="500">
-                                                    <span class="file-caption-icon"></span>
-                                                    <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Seleccionar archivo...">
-                                                </div>
-                                                <div class="input-group-btn">
-
-
-
-                                                    <div tabindex="500" class="btn btn-primary btn-file"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Examinar …</span><input id="archivo" name="excelfile" type="file"></div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="stockProducto" class="col-sm-12 col-form-label">Catálogo</label>
-                                        <div class="col-sm-12">
-                                            <select class="form-control m-b" name="account">
-                                        <option>catalogo 1</option>
-                                        <option>catalogo 2</option>
-                                        <option>catalogo 3</option>
-                                        <option>catalogo 4</option>
-                                    </select>
-                                        </div>
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
 
-                                    <div class="form-group row">
-                                        <div class="col-sm-2">
-                                            <button class="btn btn-white" id="btnLimpiar" style="width: 100%"><i class="fa fa-ban"></i> Limpiar</button>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <button class="btn btn-primary" id="btnCargar"><i class="fa fa-upload"></i> Subir archivo</button>
-                                        </div>
-                                    </div>
-                                    <div class="hr-line-dashed"></div>
-                                    <div class="form-group row">
-                                       <div class="col-sm-9">
-                                           Se cargaron <span style="color: darkgreen;font-weight: 600">123</span> registros correctos  y <span style="color: darkred;font-weight: 600">23</span> registros incorrectos
-                                       </div>
-                                        <div class="col-sm-3">
-                                            <button class="btn btn-white" id="btnLimpiar" style="width: 100%"><i class="fa fa-download"></i> Descargar resultado</button>
-                                        </div>
-                                        
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-
 
                 <!--General-->
                 <script src="js/jquery-3.1.1.min.js"></script>
@@ -386,13 +384,6 @@
 
                 <script src="js/productos.js"></script>
 
-                <script type="text/javascript">
-                    $(function() {
-                        var productos = new Productos('/NissanEcuadorAdmin/');
-                        productos.init();
-                    });
-
-                </script>
             </div>
 
             <footer class="footer">

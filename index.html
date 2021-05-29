@@ -3,481 +3,667 @@
 <html lang="es">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Administracion | Dashboard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Administracion | Dashboard</title>
 
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 
 
-	<link href="css/animate.css" rel="stylesheet">
-	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
 
-	<!--Addons-->
-	<link href="css/toastr.min.css" rel="stylesheet">
-	<link href="css/datepicker3.css" rel="stylesheet">
-	<link href="css/ladda-themeless.min.css" rel="stylesheet">
-	<link href="css/datatables.min.css" rel="stylesheet">
-	<link href="css/select2.min.css" rel="stylesheet">
-	<link href="css/switchery.css" rel="stylesheet">
-	<link href="css/sweetalert.css" rel="stylesheet">
-	<link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet">
-	<link href="css/fileinput.min.css" rel="stylesheet">
+    <!--Addons-->
+    <link href="css/toastr.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/ladda-themeless.min.css" rel="stylesheet">
+    <link href="css/datatables.min.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
+    <link href="css/switchery.css" rel="stylesheet">
+    <link href="css/sweetalert.css" rel="stylesheet">
+    <link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/fileinput.min.css" rel="stylesheet">
 
-	<!--General-->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/glyphicons.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+    <!--General-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/glyphicons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 
-	<style type="text/css"></style>
-	<style>
-		@-webkit-keyframes loadingoverlay_animation__rotate_right {
-			to {
-				-webkit-transform: rotate(360deg);
-				transform: rotate(360deg);
-			}
-		}
+    <style type="text/css"></style>
+    <style>
+        @-webkit-keyframes loadingoverlay_animation__rotate_right {
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
 
-		@keyframes loadingoverlay_animation__rotate_right {
-			to {
-				-webkit-transform: rotate(360deg);
-				transform: rotate(360deg);
-			}
-		}
+        @keyframes loadingoverlay_animation__rotate_right {
+            to {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
 
-		@-webkit-keyframes loadingoverlay_animation__rotate_left {
-			to {
-				-webkit-transform: rotate(-360deg);
-				transform: rotate(-360deg);
-			}
-		}
+        @-webkit-keyframes loadingoverlay_animation__rotate_left {
+            to {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
 
-		@keyframes loadingoverlay_animation__rotate_left {
-			to {
-				-webkit-transform: rotate(-360deg);
-				transform: rotate(-360deg);
-			}
-		}
+        @keyframes loadingoverlay_animation__rotate_left {
+            to {
+                -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+            }
+        }
 
-		@-webkit-keyframes loadingoverlay_animation__fadein {
-			0% {
-				opacity: 0;
-				-webkit-transform: scale(0.1, 0.1);
-				transform: scale(0.1, 0.1);
-			}
-			50% {
-				opacity: 1;
-			}
-			100% {
-				opacity: 0;
-				-webkit-transform: scale(1, 1);
-				transform: scale(1, 1);
-			}
-		}
+        @-webkit-keyframes loadingoverlay_animation__fadein {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(0.1, 0.1);
+                transform: scale(0.1, 0.1);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+        }
 
-		@keyframes loadingoverlay_animation__fadein {
-			0% {
-				opacity: 0;
-				-webkit-transform: scale(0.1, 0.1);
-				transform: scale(0.1, 0.1);
-			}
-			50% {
-				opacity: 1;
-			}
-			100% {
-				opacity: 0;
-				-webkit-transform: scale(1, 1);
-				transform: scale(1, 1);
-			}
-		}
+        @keyframes loadingoverlay_animation__fadein {
+            0% {
+                opacity: 0;
+                -webkit-transform: scale(0.1, 0.1);
+                transform: scale(0.1, 0.1);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+        }
 
-		@-webkit-keyframes loadingoverlay_animation__pulse {
-			0% {
-				-webkit-transform: scale(0, 0);
-				transform: scale(0, 0);
-			}
-			50% {
-				-webkit-transform: scale(1, 1);
-				transform: scale(1, 1);
-			}
-			100% {
-				-webkit-transform: scale(0, 0);
-				transform: scale(0, 0);
-			}
-		}
+        @-webkit-keyframes loadingoverlay_animation__pulse {
+            0% {
+                -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+            }
+            50% {
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+            100% {
+                -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+            }
+        }
 
-		@keyframes loadingoverlay_animation__pulse {
-			0% {
-				-webkit-transform: scale(0, 0);
-				transform: scale(0, 0);
-			}
-			50% {
-				-webkit-transform: scale(1, 1);
-				transform: scale(1, 1);
-			}
-			100% {
-				-webkit-transform: scale(0, 0);
-				transform: scale(0, 0);
-			}
-		}
+        @keyframes loadingoverlay_animation__pulse {
+            0% {
+                -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+            }
+            50% {
+                -webkit-transform: scale(1, 1);
+                transform: scale(1, 1);
+            }
+            100% {
+                -webkit-transform: scale(0, 0);
+                transform: scale(0, 0);
+            }
+        }
 
-	</style>
+    </style>
+    <style>
+        #chartdiv,
+        #chartdiv2,
+        #chartdiv3 {
+            width: 100%;
+            height: 200px;
+        }
+
+    </style>
 </head>
 
 <body class="fixed-sidebar pace-done">
-	<div class="pace  pace-inactive">
-		<div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
-			<div class="pace-progress-inner"></div>
-		</div>
-		<div class="pace-activity"></div>
-	</div>
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
 
-	<div id="wrapper">
-		<div>
-			<nav class="navbar-default navbar-static-side" role="navigation">
-				<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
-					<div class="sidebar-collapse" style="overflow: hidden; width: auto; height: 100%;">
-						<ul class="nav metismenu" id="side-menu">
-							<li class="nav-header" id="parent">
-								<div class="dropdown profile-element" style="text-align: center">
-									<img alt="image" src="img/logo.png" class="" style="width: 40%; margin-bottom: 10px;">
-									<a data-toggle="dropdown" class="dropdown-toggle" href="">
+    <div id="wrapper">
+        <div>
+            <nav class="navbar-default navbar-static-side" role="navigation">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+                    <div class="sidebar-collapse" style="overflow: hidden; width: auto; height: 100%;">
+                        <ul class="nav metismenu" id="side-menu">
+                            <li class="nav-header" id="parent">
+                                <div class="dropdown profile-element" style="text-align: center">
+                                    <img alt="image" src="img/logo.png" class="" style="width: 40%; margin-bottom: 10px;">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="">
                             <span class="block m-t-xs font-bold"> Ecuador</span>
                             <span class="text-muted text-xs block">Administracion</span>
                         </a>
-								</div>
+                                </div>
 
-							</li>
-							<li class="active">
-								<a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
-							</li>
-							<li>
-								<a href="producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Productos</span> </a>
-							</li>
-							<li>
-								<a href="categoria.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Categorías</span> </a>
-							</li>
-							<li>
-								<a href="marca.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Marcas</span> </a>
-							</li>
-							<li>
-								<a href="img-producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Imágenes de productos</span> </a>
+                            </li>
+                            <li class="active">
+                                <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
+                            </li>
+                            <li>
+                                <a href="producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Productos</span> </a>
+                            </li>
+                            <li>
+                                <a href="categoria.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Categorías</span> </a>
+                            </li>
+                            <li>
+                                <a href="marca.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Marcas</span> </a>
+                            </li>
+                            <li>
+                                <a href="campania.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Campañas</span> </a>
+                            </li>
+                            <li>
+                                <a href="img-producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Imágenes de productos</span> </a>
 
-							</li>
-							<li>
-								<a href="plataformas.html"><i class="fa fa-th-large"></i> <span class="nav-label">Plataformas integradas</span> </a>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Reportes</span> <span class="fa arrow"></span></a>
-								<ul class="nav nav-second-level collapse" aria-expanded="false">
+                            </li>
+                            <li>
+                                <a href="plataformas.html"><i class="fa fa-th-large"></i> <span class="nav-label">Plataformas integradas</span> </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Reportes</span> <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
 
-									<li><a href="rpte-categoria.html">Reporte de categorias</a></li>
+                                    <li><a href="rpte-categoria.html">Reporte de categorias</a></li>
 
-									<li><a href="rpte-marca.html">Reporte de marcas</a></li>
+                                    <li><a href="rpte-marca.html">Reporte de marcas</a></li>
 
-									<li><a href="rpte-productos.html">Reporte de productos</a></li>
+                                    <li><a href="rpte-productos.html">Reporte de productos</a></li>
 
-								</ul>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Administracion</span> <span class="fa arrow"></span></a>
-								<ul class="nav nav-second-level collapse" aria-expanded="false">
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Administracion</span> <span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level collapse" aria-expanded="false">
 
-									<li><a href="roles.html">Roles</a></li>
+                                    <li><a href="roles.html">Roles</a></li>
 
-									<li><a href="usuarios.html">Usuarios</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 699.688px;"></div>
-					<div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.9; z-index: 90; right: 1px;"></div>
-				</div>
-			</nav>
-		</div>
+                                    <li><a href="usuarios.html">Usuarios</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 699.688px;"></div>
+                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.9; z-index: 90; right: 1px;"></div>
+                </div>
+            </nav>
+        </div>
 
-		<div id="page-wrapper" class="gray-bg dashbard-1">
-			<div class="row border-bottom">
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+            <div class="row border-bottom">
 
-				<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-					<div class="navbar-header">
-						<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-					</div>
-					<ul class="nav navbar-top-links navbar-right">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
 
-						<li class="dropdown">
-							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                 <span>admin</span> <i class="fa fa-user-circle-o"></i>
             </a>
-							<ul class="dropdown-menu animated fadeInRight m-t-xs">
-								<li><a class="dropdown-item" href="perfil.html"><i class="fa fa-user"></i> Perfil</a></li>
-								<li class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
-							</ul>
-						</li>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="perfil.html"><i class="fa fa-user"></i> Perfil</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i> Cerrar sesión</a></li>
+                            </ul>
+                        </li>
 
-					</ul>
+                    </ul>
 
-				</nav>
+                </nav>
 
-			</div>
+            </div>
 
-			<div>
+            <div>
 
-				<div class="row wrapper border-bottom white-bg page-heading">
-					<div class="col-lg-10">
-						<h2>Dashboard</h2>
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item active">
-								<strong>Estadisticas</strong>
-							</li>
-						</ol>
-					</div>
-				</div>
-
-				<div class="wrapper wrapper-content animated fadeInUp">
-					<div class="row">
-						<div class="col-lg-6">
-							<div class="ibox">
-								<div class="ibox-title">
-									<h5>Últimos productos agregados</h5>
-								</div>
-								<div class="ibox-content" id="graph-content">
-									<table class="table table-bordered table-hover dataTable no-footer" id="gridProductos" style="width: 100%;" role="grid" aria-describedby="gridProductos_info">
-										<thead>
-											<tr role="row">
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 65px;">Código Web</th>
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 237px;">Producto</th>
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 76px;">Marca</th>
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">Categoría</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="ibox">
-								<div class="ibox-title">
-									<h5>Últimos productos dados de baja</h5>
-								</div>
-								<div class="ibox-content" id="graph-content">
-									<table class="table table-bordered table-hover dataTable no-footer" id="gridProductos" style="width: 100%;" role="grid" aria-describedby="gridProductos_info">
-										<thead>
-											<tr role="row">
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 65px;">Código Web</th>
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 237px;">Producto</th>
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 76px;">Marca</th>
-												<th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">Categoría</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="odd">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-											<tr role="row" class="even">
-												<td>WSU0099</td>
-												<td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
-												<td>Mason Natural</td>
-												<td>Suplementos Deportivos</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-
-				<!--General-->
-				<script src="js/jquery-3.1.1.min.js"></script>
-				<script src="js/popper.min.js"></script>
-				<script src="js/bootstrap.min.js"></script>
-				<script src="js/jquery.metisMenu.js"></script>
-				<script src="js/jquery.slimscroll.min.js"></script>
-
-				<!--Configuration-->
-				<script src="js/inspinia.js"></script>
-				<script src="js/pace.min.js"></script>
-
-				<!--Addons-->
-				<script src="js/Chart.min.js"></script>
-				<script src="js/toastr.min.js"></script>
-				<script src="js/bootstrap-datepicker.js"></script>
-				<script src="js/handlebars-v4.1.2.js"></script>
-				<script src="js/jquery.form.min.js"></script>
-				<script src="js/jquery.validate.min.js"></script>
-				<script src="js/additional-methods.min.js"></script>
-				<script src="js/datatables.min.js"></script>
-				<script src="js/dataTables.bootstrap4.min.js"></script>
-				<script src="js/fnFindCellRowIndexes.js"></script>
-				<script src="js/select2.js"></script>
-				<script src="js/spin.min.js"></script>
-				<script src="js/ladda.min.js"></script>
-				<script src="js/ladda.jquery.min.js"></script>
-				<script src="js/loadingoverlay.js"></script>
-				<script src="js/switchery.js"></script>
-				<script src="js/sweetalert.min.js"></script>
-				<script src="js/fileinput.min.js"></script>
-				<script src="js/fileinput-es.js"></script>
-				<script src="js/fileinput-theme.min.js"></script>
-
-				<!--Plugin-->
-				<script src="js/promotick.js"></script>
-				<script src="js/promotick-ajax.js"></script>
-				<script src="js/promotick-toast.js"></script>
-				<script src="js/promotick-loader.js"></script>
-				<script src="js/promotick-modal.js"></script>
-				<script src="js/promotick-render.js"></script>
-				<script src="js/promotick-admin.js"></script>
+                <div class="row wrapper border-bottom white-bg page-heading">
+                    <div class="col-lg-10">
+                        <h2>Dashboard</h2>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item active">
+                                <strong>Estadisticas</strong>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="wrapper wrapper-content animated fadeInUp">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Productos activos/inactivos</h5>
+                                </div>
+                                <div class="ibox-content" id="graph-content">
+                                    <div id="chartdiv" style="text-align: center"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Productos por categoria</h5>
+                                </div>
+                                <div class="ibox-content" id="graph-content">
+                                    <div id="chartdiv2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Productos actualizados</h5>
+                                </div>
+                                <div class="ibox-content" id="graph-content">
+                                    <div id="chartdiv3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper wrapper-content animated fadeInUp">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Últimos productos agregados</h5>
+                                </div>
+                                <div class="ibox-content" id="graph-content">
+                                    <table class="table table-bordered table-hover dataTable no-footer" id="gridProductos" style="width: 100%;" role="grid" aria-describedby="gridProductos_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 65px;">Código Web</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 237px;">Producto</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 76px;">Marca</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">Categoría</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="ibox">
+                                <div class="ibox-title">
+                                    <h5>Últimos productos dados de baja</h5>
+                                </div>
+                                <div class="ibox-content" id="graph-content">
+                                    <table class="table table-bordered table-hover dataTable no-footer" id="gridProductos" style="width: 100%;" role="grid" aria-describedby="gridProductos_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 65px;">Código Web</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 237px;">Producto</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 76px;">Marca</th>
+                                                <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 130px;">Categoría</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td>WSU0099</td>
+                                                <td><a href="detalle-prod.html"><u>Zinc 30mg, 100 tabletas</u></a></td>
+                                                <td>Mason Natural</td>
+                                                <td>Suplementos Deportivos</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
-				<script src="js/dashboard.js"></script>
+                <!--General-->
+                <script src="js/jquery-3.1.1.min.js"></script>
+                <script src="js/popper.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/jquery.metisMenu.js"></script>
+                <script src="js/jquery.slimscroll.min.js"></script>
 
-				<script type="text/javascript">
-					$(function() {
-						var dashboard = new Dashboard('/NissanEcuadorAdmin/');
-						dashboard.init();
-					});
+                <!--Configuration-->
+                <script src="js/inspinia.js"></script>
+                <script src="js/pace.min.js"></script>
 
-				</script>
-			</div>
+                <!--Addons-->
+                <script src="js/Chart.min.js"></script>
+                <script src="js/toastr.min.js"></script>
+                <script src="js/bootstrap-datepicker.js"></script>
+                <script src="js/handlebars-v4.1.2.js"></script>
+                <script src="js/jquery.form.min.js"></script>
+                <script src="js/jquery.validate.min.js"></script>
+                <script src="js/additional-methods.min.js"></script>
+                <script src="js/datatables.min.js"></script>
+                <script src="js/dataTables.bootstrap4.min.js"></script>
+                <script src="js/fnFindCellRowIndexes.js"></script>
+                <script src="js/select2.js"></script>
+                <script src="js/spin.min.js"></script>
+                <script src="js/ladda.min.js"></script>
+                <script src="js/ladda.jquery.min.js"></script>
+                <script src="js/loadingoverlay.js"></script>
+                <script src="js/switchery.js"></script>
+                <script src="js/sweetalert.min.js"></script>
+                <script src="js/fileinput.min.js"></script>
+                <script src="js/fileinput-es.js"></script>
+                <script src="js/fileinput-theme.min.js"></script>
 
-			<footer class="footer">
-				<div class="footer">
-					<div class="float-right">
-						<strong>Copyright</strong> Promotick © 2020
-					</div>
-					<div>
-
-					</div>
-				</div>
-			</footer>
-		</div>
-
-	</div>
+                <!--Plugin-->
+                <script src="js/promotick.js"></script>
+                <script src="js/promotick-ajax.js"></script>
+                <script src="js/promotick-toast.js"></script>
+                <script src="js/promotick-loader.js"></script>
+                <script src="js/promotick-modal.js"></script>
+                <script src="js/promotick-render.js"></script>
+                <script src="js/promotick-admin.js"></script>
 
 
 
+                <script src="js/dashboard.js"></script>
+
+                <script type="text/javascript">
+                    $(function() {
+                        var dashboard = new Dashboard('/NissanEcuadorAdmin/');
+                        dashboard.init();
+                    });
+
+                </script>
+            </div>
+
+            <footer class="footer">
+                <div class="footer">
+                    <div class="float-right">
+                        <strong>Copyright</strong> Promotick © 2020
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <!-- Resources (productos inactivos)-->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <!-- Chart code -->
+    <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            // Create chart instance
+            var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+            // Add data
+            chart.data = [{
+                "country": "activos",
+                "litres": 501
+            }, {
+                "country": "inactivos",
+                "litres": 30
+            }];
+
+            // Add and configure Series
+            var pieSeries = chart.series.push(new am4charts.PieSeries());
+            pieSeries.dataFields.value = "litres";
+            pieSeries.dataFields.category = "country";
+            pieSeries.slices.template.stroke = am4core.color("#fff");
+            pieSeries.slices.template.strokeWidth = 2;
+            pieSeries.slices.template.strokeOpacity = 1;
+
+            // This creates initial animation
+            pieSeries.hiddenState.properties.opacity = 1;
+            pieSeries.hiddenState.properties.endAngle = -90;
+            pieSeries.hiddenState.properties.startAngle = -90;
+
+        }); // end am4core.ready()
+
+    </script>
+
+    <!-- Resources (productos x categoria)-->
+
+    <script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
+
+    <!-- Chart code -->
+    <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_material);
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            // Create chart instance
+            var chart = am4core.create("chartdiv2", am4charts.PieChart);
+
+            // Add data
+            chart.data = [{
+                "country": "Cat 1",
+                "litres": 58
+            }, {
+                "country": "Cat 2",
+                "litres": 95
+            }, {
+                "country": "Cat 3",
+                "litres": 21
+            }, {
+                "country": "Cat 4",
+                "litres": 15
+            }, {
+                "country": "Cat 5",
+                "litres": 19
+            }, {
+                "country": "Cat 6",
+                "litres": 28
+            }, {
+                "country": "Cat 7",
+                "litres": 99
+            }, {
+                "country": "Cat 8",
+                "litres": 60
+            }, {
+                "country": "Cat 9",
+                "litres": 50
+            }];
+
+            // Add and configure Series
+            var pieSeries = chart.series.push(new am4charts.PieSeries());
+            pieSeries.dataFields.value = "litres";
+            pieSeries.dataFields.category = "country";
+            pieSeries.slices.template.stroke = am4core.color("#fff");
+            pieSeries.slices.template.strokeWidth = 2;
+            pieSeries.slices.template.strokeOpacity = 1;
+
+            // This creates initial animation
+            pieSeries.hiddenState.properties.opacity = 1;
+            pieSeries.hiddenState.properties.endAngle = -90;
+            pieSeries.hiddenState.properties.startAngle = -90;
+
+        }); // end am4core.ready()
+
+    </script>
+
+    <!--actualizados-->
+    <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+    <!-- Chart code -->
+    <script>
+        am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_frozen);
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            // Create chart instance
+            var chart = am4core.create("chartdiv3", am4charts.PieChart);
+
+            // Add data
+            chart.data = [{
+                "country": "actualizados",
+                "litres": 500
+            }, {
+                "country": "no",
+                "litres": 50
+            }];
+
+            // Add and configure Series
+            var pieSeries = chart.series.push(new am4charts.PieSeries());
+            pieSeries.dataFields.value = "litres";
+            pieSeries.dataFields.category = "country";
+            pieSeries.slices.template.stroke = am4core.color("#fff");
+            pieSeries.slices.template.strokeWidth = 2;
+            pieSeries.slices.template.strokeOpacity = 1;
+
+            // This creates initial animation
+            pieSeries.hiddenState.properties.opacity = 1;
+            pieSeries.hiddenState.properties.endAngle = -90;
+            pieSeries.hiddenState.properties.startAngle = -90;
+
+        }); // end am4core.ready()
+
+    </script>
 </body>
 
 </html>

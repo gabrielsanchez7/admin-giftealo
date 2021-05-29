@@ -154,7 +154,7 @@
                             <li>
                                 <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">Dashboard</span></a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Productos</span> </a>
                             </li>
                             <li>
@@ -162,6 +162,9 @@
                             </li>
                             <li>
                                 <a href="marca.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Marcas</span> </a>
+                            </li>
+                            <li class="active">
+                                <a href="campania.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Campañas</span> </a>
                             </li>
                             <li>
                                 <a href="img-producto.html"><i class="fa fa-th-large"></i> <span class="nav-label">G. Imágenes de productos</span> </a>
@@ -226,13 +229,13 @@
 
                 <div class="row wrapper border-bottom white-bg page-heading">
                     <div class="col-lg-10">
-                        <h2>Importar productos</h2>
+                        <h2>Nueva campaña</h2>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="index.html">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="producto.html">Gestión de productos</a>
+                                <a href="producto.html">Gestión de campañas</a>
                             </li>
 
                         </ol>
@@ -242,95 +245,55 @@
                 <div class="wrapper wrapper-content animated fadeInUp">
 
                     <div class="row">
-                        <div class="col-xs-12 col-md-4">
+
+                        <div class="col-xs-12 col-md-12">
 
                             <div class="ibox">
                                 <div class="ibox-title">
-                                    <h5>Informacion</h5>
+                                    <h5>Campañas</h5>
                                     <div class="ibox-tools ibox-tools-button">
 
                                     </div>
                                 </div>
 
                                 <div class="ibox-content">
-                                    <span>Plantilla</span>
-                                    <ul style="font-size: 11px;">
-                                        <li>
-                                            <a href="">FORMATO_CARGA_PRODUCTOS.xlsx</a>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-xs-12 col-md-8">
-
-                            <div class="ibox">
-                                <div class="ibox-title">
-                                    <h5>Carga</h5>
-                                    <div class="ibox-tools ibox-tools-button">
-
-                                    </div>
-                                </div>
-
-                                <div class="ibox-content">
-                                    <div class="file-input file-input-new theme-fa form-group row">
-                                        <div class="col-md-12">
-                                            <div class="kv-upload-progress kv-hidden" style="display: none;">
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-success progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%;">
-                                                        0%
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <div class="input-group file-caption-main">
-                                                <div class="file-caption form-control kv-fileinput-caption" tabindex="500">
-                                                    <span class="file-caption-icon"></span>
-                                                    <input class="file-caption-name" onkeydown="return false;" onpaste="return false;" placeholder="Seleccionar archivo...">
-                                                </div>
-                                                <div class="input-group-btn">
-
-
-
-                                                    <div tabindex="500" class="btn btn-primary btn-file"><i class="fa fa-folder-open"></i> <span class="hidden-xs">Examinar …</span><input id="archivo" name="excelfile" type="file"></div>
-                                                </div>
-                                            </div>
+                                    <div class="form-group row">
+                                        <label for="stockProducto" class="col-sm-12 col-form-label">Nombre</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="stockProducto" class="col-sm-12 col-form-label">Catálogo</label>
-                                        <div class="col-sm-12">
+                                        <label for="stockProducto" class="col-sm-12 col-form-label">Categoría</label>
+                                        <div class="col-sm-6">
                                             <select class="form-control m-b" name="account">
-                                        <option>catalogo 1</option>
-                                        <option>catalogo 2</option>
-                                        <option>catalogo 3</option>
-                                        <option>catalogo 4</option>
+                                        <option>cat 1</option>
+                                        <option>cat 2</option>
+                                        <option>cat 3</option>
+                                        <option>cat 4</option>
                                     </select>
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label for="stockProducto" class="col-sm-12 col-form-label">Fecha inicio</label>
+                                        <div class="col-sm-6">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="stockProducto" class="col-sm-12 col-form-label">Fecha fin</label>
+                                        <div class="col-sm-6">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
                                     <div class="hr-line-dashed"></div>
 
                                     <div class="form-group row">
-                                        <div class="col-sm-2">
-                                            <button class="btn btn-white" id="btnLimpiar" style="width: 100%"><i class="fa fa-ban"></i> Limpiar</button>
-                                        </div>
                                         <div class="col-sm-3">
-                                            <button class="btn btn-primary" id="btnCargar"><i class="fa fa-upload"></i> Subir archivo</button>
+                                            <button class="btn btn-primary" id="btnCargar">Crear campaña</button>
                                         </div>
                                     </div>
-                                    <div class="hr-line-dashed"></div>
-                                    <div class="form-group row">
-                                       <div class="col-sm-9">
-                                           Se cargaron <span style="color: darkgreen;font-weight: 600">123</span> registros correctos  y <span style="color: darkred;font-weight: 600">23</span> registros incorrectos
-                                       </div>
-                                        <div class="col-sm-3">
-                                            <button class="btn btn-white" id="btnLimpiar" style="width: 100%"><i class="fa fa-download"></i> Descargar resultado</button>
-                                        </div>
-                                        
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
