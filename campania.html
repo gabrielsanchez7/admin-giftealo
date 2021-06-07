@@ -252,31 +252,12 @@
                                 <div class="ibox-title">
                                     <h5>Campañas</h5>
                                     <div class="ibox-tools ibox-tools-button">
-
-                                        <button type="button" class="btn btn-warning btn-sm btnAccion" data-url=""><i class="fa fa-download"></i> Exportar excel</button>
-                                        <a type="button" class="btn btn-warning btn-sm btnAccion" href="importar-marca.html"><i class="fa fa-upload"></i> Importar marca</a>
                                         <a type="button" class="btn btn-danger btn-sm btnAccion" href="nueva-campa.html"><i class="fa fa-plus"></i> Nueva campaña</a>
                                     </div>
                                 </div>
 
                                 <div class="ibox-content">
 
-                                    <div class="row m-b-sm m-t-sm">
-                                        <div class="col-xs-12 col-md-4">
-                                            <div class="form-group">
-
-                                                <label class="font-normal">Búsqueda :</label>
-
-                                                <div class="input-daterange input-group">
-
-                                                    <input type="text" class="form-control-sm form-control" name="buscarProducto" id="buscarProducto" placeholder="nombre">
-
-                                                    <button type="button" class="btn btn-primary btn-sm" id="btnFiltrar" style="margin-left: 10px;"><i class="fa fa-search"></i> Buscar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
 
                                     <div class="table-responsive">
                                         <div id="gridProductos_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
@@ -296,12 +277,16 @@
                                                         </thead>
                                                         <tbody>
                                                             <tr role="row" class="odd">
-                                                                <td><a href="detalle-marca.html"><u>123</u></a></td>
+                                                                <td><a href="nueva-campa.html"><u>123</u></a></td>
                                                                 <td>Campaña 1</td>
                                                                 <td>Lorem ipsum</td>
                                                                 <td>Lorem ipsum</td>
                                                                 <td>Lorem ipsum</td>
-                                                                <td>Activo</td>
+                                                                <td class=" estado">
+																	<div class="switch">
+																		<div class="onoffswitch"><input type="checkbox" checked="" disabled="" class="onoffswitch-checkbox" id="s-1739" data-id="1739"><label class="onoffswitch-label" for="s-1739"><span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span></label></div>
+																	</div>
+																</td>
                                                             </tr>
 
                                                         </tbody>
@@ -309,26 +294,7 @@
 
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-5">
-                                                    <div class="dataTables_info" id="gridProductos_info" role="status" aria-live="polite">Mostrando registros del 1 al 10 de un total de 100 registros</div>
-                                                </div>
-                                                <div class="col-sm-12 col-md-7">
-                                                    <div class="dataTables_paginate paging_simple_numbers" id="gridProductos_paginate">
-                                                        <ul class="pagination">
-                                                            <li class="paginate_button page-item previous disabled" id="gridProductos_previous"><a href="" aria-controls="gridProductos" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li>
-                                                            <li class="paginate_button page-item active"><a href="" aria-controls="gridProductos" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
-                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                                                            <li class="paginate_button page-item disabled" id="gridProductos_ellipsis"><a href="" aria-controls="gridProductos" data-dt-idx="6" tabindex="0" class="page-link">…</a></li>
-                                                            <li class="paginate_button page-item "><a href="" aria-controls="gridProductos" data-dt-idx="7" tabindex="0" class="page-link">10</a></li>
-                                                            <li class="paginate_button page-item next" id="gridProductos_next"><a href="" aria-controls="gridProductos" data-dt-idx="8" tabindex="0" class="page-link">Siguiente</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div>
 
@@ -384,12 +350,21 @@
 
                 <script src="js/productos.js"></script>
 
+<!--
+				<script type="text/javascript">
+					$(function() {
+						var productos = new Productos('/NissanEcuadorAdmin/');
+						productos.init();
+					});
+
+				</script>
+-->
             </div>
 
             <footer class="footer">
                 <div class="footer">
                     <div class="float-right">
-                        <strong>Copyright</strong> Promotick © 2020
+                        <strong>Copyright</strong> Promotick © 2021
                     </div>
                     <div>
 
