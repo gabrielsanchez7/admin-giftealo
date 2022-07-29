@@ -116,7 +116,7 @@ Productos.prototype.actualizarEstado = function(idProducto, checked, $checkbox) 
 Productos.prototype.listarProductos = function(){
     var obj = this;
     obj.grid.DataTable({
-        "bProcessing" : true,
+        // "bProcessing" : true,
         "bFilter" : false,
         "bLengthChange": false,
         "bPaginate": true,
